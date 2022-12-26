@@ -24,10 +24,14 @@ class Solution
 {
     //Function to count nodes of a linked list.
     public static int getCount(Node head){
-        if(head.next == null)
-            return 1;
+        int listLength = 0;
         
-        return 1 + getCount(head.next);
+        while(head != null){
+            listLength++;
+            head = head.next;
+        }
+        
+        return listLength;
     }
 }
     
